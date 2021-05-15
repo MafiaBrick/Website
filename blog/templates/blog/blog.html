@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Мой блог</title>
+  </head>
+  <body>
+    {% for el in blogs %}
+      <h1>{{el.title}}</h1>
+      <p>{{el.date}}</p>
+      <p>{{el.description}}</p>
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HomePage</title>
+  </head>
+  <body>
+    {% for el in projects %}
+      <h1>{{el.title}}</h1>
+      <p>{{el.description}}</p>
+      {%if el.url %}
+        <a href="{{el.url}}" target="_blank"><img src="{{el.image.url}}" height="150" width="200"></a>
+      {% else %}
+        <img src="{{el.image.url}}" height="150" width="200">
+      {%endif%}
+    {%endfor%}
+  </body>
+</html>
